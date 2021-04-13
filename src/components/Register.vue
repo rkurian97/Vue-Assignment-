@@ -30,17 +30,18 @@ export default {
   name: "Register",
   methods: {
       submit: function(){
-        const registerForm= document.getElementById("registerForm");
-
-        function registerLocal(){
             let firstName= document.getElementById("firstName").value;
             let lastName= document.getElementById("lastName").value;
             let email= document.getElementById("email").value;
             let password= document.getElementById("password").value;
-
-            console.log(firstName+ lastName+ email+password);
+            
+            let userRecord= {
+                firstName: firstName,
+                lastName: lastName,
+                password: password
             }
-            registerForm.addEventListener("submit", registerLocal);
+
+            localStorage.setItem(email, JSON.stringify(userRecord) );
       }
   }
 };
