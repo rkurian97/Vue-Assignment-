@@ -1,0 +1,32 @@
+<template>
+  <div id="register">
+    <div class="login-form">
+        <form action="" method="POST">
+            <h2 class="text-center">Register</h2>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name" name= 'firstName' required="required">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name" name= 'lastName' required="required">
+            </div>       
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Email" name='email' required="required">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" name='password' required="required">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </div>  
+        </form>
+        <p class="text-center">
+            <a href="#/login">Back to Login</a>
+        </p>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  name: "Register"
+};
+</script>
